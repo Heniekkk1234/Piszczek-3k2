@@ -1,0 +1,22 @@
+<html>
+ <body>
+ <div style="color:purple;font-size:50px;">
+ <script language="JavaScript">
+// Henryk Piszczek 10.25.2025
+// Zadanie 11
+ var D1_pisz=prompt("Data1=","");
+ var D2_pisz=prompt("Data2=","");
+ var sekund;
+ var a=parseFloat(D1_pisz);
+ var b=parseFloat(D2_pisz);
+ sekund=(a-b)*24*60*60;
+ document.write("Ilość sekund między dniami "+a+" i "+b+" = "+sekund+"<br>");
+ function okno_zamknij_piszczek()
+ {
+ window.close()
+ }
+ </script>
+ </div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_piszczek()"/>
+ </body>
+ </html>
