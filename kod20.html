@@ -1,6 +1,7 @@
 <html>
  <body>
  <textarea cols="90" rows="24">
+
 <html>
 <head>
  <meta charset="UTF-8">
@@ -25,6 +26,56 @@ var yb_pisz= parseFloat(document.getElementById('yb_pisz').value);
  var pierwiastek=Math.sqrt(suma_kw);
 document.getElementById("nazwa").innerHTML ="pole AB= "+pierwiastek+" cm"
 }
+ 
+function AC_pisz()
+ {
+var xa_pisz= parseFloat(document.getElementById('xa_pisz').value);
+var xc_pisz= parseFloat(document.getElementById('xc_pisz').value);
+var ya_pisz= parseFloat(document.getElementById('ya_pisz').value);
+var yc_pisz= parseFloat(document.getElementById('yc_pisz').value);
+
+ var x= xa_pisz - xc_pisz;
+ var y= ya_pisz - yc_pisz;
+ var x_kwadrat= Math.pow(x,2);
+ var y_kwadrat= Math.pow(y,2);
+ var suma_kw= x_kwadrat + y_kwadrat;
+ var pierwiastek=Math.sqrt(suma_kw);
+document.getElementById("nazwa").innerHTML ="pole AC= "+pierwiastek+" cm"
+}
+
+function BC_pisz()
+ {
+var xb_pisz= parseFloat(document.getElementById('xb_pisz').value);
+var xc_pisz= parseFloat(document.getElementById('xc_pisz').value);
+var yb_pisz= parseFloat(document.getElementById('yb_pisz').value);
+var yc_pisz= parseFloat(document.getElementById('yc_pisz').value);
+
+ var x= xb_pisz - xc_pisz;
+ var y= yb_pisz - yc_pisz;
+ var x_kwadrat= Math.pow(x,2);
+ var y_kwadrat= Math.pow(y,2);
+ var suma_kw= x_kwadrat + y_kwadrat;
+ var pierwiastek=Math.sqrt(suma_kw);
+document.getElementById("nazwa").innerHTML ="pole BC= "+pierwiastek+" cm"
+}
+
+
+ 
+</script>
+ 
+ Podaj długość boku xa: <input type="text" id="xa_pisz"> cm &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Podaj długość boku ya: <input type="text" id="ya_pisz" > cm<br><br><br>
+Podaj długość boku xb: <input type="text" id="xb_pisz" > cm&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Podaj długość boku yb: <input type="text" id="yb_pisz" > cm<br><br><br>
+Podaj długość boku xc: <input type="text" id="xc_pisz" > cm&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Podaj długość boku yc: <input type="text" id="yc_pisz" > cm<br><br><br>
+ <input type="button" name="AB" value="Długość AB" Onclick="AB_pisz()"><br><br>
+<input type="button" name="AC" value="Długość AC" Onclick="AC_pisz()"><br><br>
+<input type="button" name="BC" value="Długość BC" Onclick="BC_pisz()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+
 </textarea>
  </body>
 </html>
