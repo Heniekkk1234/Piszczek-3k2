@@ -1,0 +1,24 @@
+<html>
+<head>
+ <script language="JavaScript">
+function pole(a,b)
+{
+ a_pisz=parseFloat(a)
+ b_pisz=parseFloat(b)
+ pole_pisz=a_pisz*b_pisz
+ document.getElementsByName('pole_wynik')[0].value=pole_pisz.toFixed(2); 
+ alert("pole="+pole_pisz.toFixed(2)+" cm");
+ pokaz1.innerHTML="pole="+pole_pisz.toFixed(2)+"cm";
+}
+function obwod(a,b)
+{
+ a_pisz=parseFloat(a)
+ b_pisz=parseFloat(b)
+ obwod_pisz=2*a_pisz + 2*b_pisz
+ document.getElementsByName('obwod_wynik')[0].value=obwod_pisz.toFixed(2);
+alert("obwod="+obwod_pisz.toFixed(2)+" cm");
+ pokaz2.innerHTML="obwod="+obwod_pisz.toFixed(2)+"cm";
+ 
+}
+ </script>
+</head>
