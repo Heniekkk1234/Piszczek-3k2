@@ -1,6 +1,7 @@
 <html>
  <body>
  <textarea cols="90" rows="24">
+
 <html>
 <head>
  <script language="JavaScript">
@@ -25,6 +26,31 @@ alert("obwod="+obwod_pisz.toFixed(2)+" cm");
 }
  </script>
 </head>
+<body>
+Obliczanie pola i obwodu prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="pole(this.boka.value,this.bokb.value);
+obwod(this.boka.value,this.bokb.value);return false">
+ Podaj a=
+ <input size="6" name="boka">
+ Podaj b=
+ <input size="6" name="bokb">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ pole=
+ <input size="6" name="pole_wynik">
+ obwod=
+ <input size="6" name="obwod_wynik">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
+
+
    </textarea>
  </body>
 </html>
