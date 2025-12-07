@@ -4,49 +4,46 @@
 
 <html>
 <head>
- <script language="JavaScript">
+ <script>
 function pole(a,b)
 {
- a_pisz=parseFloat(a)
- b_pisz=parseFloat(b)
- pole_pisz=a_pisz*b_pisz
- document.getElementsByName('pole_wynik')[0].value=pole_pisz.toFixed(2); 
- alert("pole="+pole_pisz.toFixed(2)+" cm");
- pokaz1.innerHTML="pole="+pole_pisz.toFixed(2)+"cm";
+    a_pisz = parseFloat(a);
+    b_pisz = parseFloat(b);
+    pole_pisz = a_pisz * b_pisz;
+    document.getElementsByName('pole_wynik')[0].value = pole_pisz.toFixed(2); 
+    alert("pole=" + pole_pisz.toFixed(2) + " cm");
+    document.getElementById('pokaz1').innerHTML = "pole=" + pole_pisz.toFixed(2) + " cm";
 }
+
 function obwod(a,b)
 {
- a_pisz=parseFloat(a)
- b_pisz=parseFloat(b)
- obwod_pisz=2*a_pisz + 2*b_pisz
- document.getElementsByName('obwod_wynik')[0].value=obwod_pisz.toFixed(2);
-alert("obwod="+obwod_pisz.toFixed(2)+" cm");
- pokaz2.innerHTML="obwod="+obwod_pisz.toFixed(2)+"cm";
- 
+    a_pisz = parseFloat(a);
+    b_pisz = parseFloat(b);
+    obwod_pisz = 2*a_pisz + 2*b_pisz;
+    document.getElementsByName('obwod_wynik')[0].value = obwod_pisz.toFixed(2);
+    alert("obwod=" + obwod_pisz.toFixed(2) + " cm");
+    document.getElementById('pokaz2').innerHTML = "obwod=" + obwod_pisz.toFixed(2) + " cm";
 }
  </script>
 </head>
 <body>
 Obliczanie pola i obwodu prostokąta
 <br> <br>
-<form name="formularz" action="..." onsubmit="pole(this.boka.value,this.bokb.value);
-obwod(this.boka.value,this.bokb.value);return false">
+<form name="formularz" action="..." onsubmit="pole(this.boka.value,this.bokb.value); obwod(this.boka.value,this.bokb.value); return false">
  Podaj a=
  <input size="6" name="boka">
  Podaj b=
  <input size="6" name="bokb">
  <br> <br>
- <input TYPE="submit" Value="oblicz" >
+ <input type="submit" value="oblicz">
  <br> <br>
  pole=
  <input size="6" name="pole_wynik">
  obwod=
  <input size="6" name="obwod_wynik">
 </form>
-<table>
- <tr id="pokaz1"></tr>
- <tr id="pokaz2"></tr>
-</table>
+<div id="pokaz1"></div>
+<div id="pokaz2"></div>
 </body>
 </html>
 
